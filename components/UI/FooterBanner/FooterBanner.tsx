@@ -9,8 +9,8 @@ export default function FooterBanner() {
 
   return (
     <footer className={styles.footer}>
-      <div className={styles.footerWrapper}>
-        <RenderIf condition={!hideFooter}>
+      <RenderIf condition={!hideFooter}>
+        <div className={styles.footerWrapper}>
           <span className={styles.dismissible}>
             <span>
               <b>Açıklama:</b> Twitter, Instagram, Whatsapp ve çeşitli web
@@ -24,9 +24,9 @@ export default function FooterBanner() {
               <HighlightOffIcon onClick={() => setHideFooter(true)} />
             </span>
           </span>
-        </RenderIf>
-      </div>
-      <HelpButton />
+        </div>
+        <HelpButton />
+      </RenderIf>
     </footer>
   );
 }
